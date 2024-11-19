@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('password');
             $table->text('token')->nullable();
             $table->enum('role',['admin','customer'])->default('customer');
-            $table->enum('status',[1,0])->default(1);
+            $table->integer('status');
             // $table->rememberToken();
             $table->timestamps();
  
