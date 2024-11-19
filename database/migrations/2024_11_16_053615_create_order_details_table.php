@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('checkin_date');
             $table->text('checkout_date');
             $table->text('adult');
-            $table->text('children');
+            $table->text('children')->nullable();
             $table->text('subtotal');
             $table->timestamps();
         });

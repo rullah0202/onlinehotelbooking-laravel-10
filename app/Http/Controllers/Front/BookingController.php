@@ -142,7 +142,7 @@ class BookingController extends Controller
 
     public function checkout()
     {
-        if(!User::where('role','customer')->check()) {
+        if(!Auth::guard('web')->check()) {
             return redirect()->back()->with('error', 'You must have to login in order to checkout');
         }
 
@@ -155,7 +155,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        if(!User::where('role','customer')->check()) {
+        if(!Auth::guard('web')->check()) {
             return redirect()->back()->with('error', 'You must have to login in order to checkout');
         }
 
