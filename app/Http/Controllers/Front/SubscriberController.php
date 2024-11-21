@@ -12,7 +12,7 @@ class SubscriberController extends Controller
     public function send_email(Request $request)
     {
         $validator = \Validator::make($request->all(),[
-            'email' => 'required|email'
+            'email' => 'required|email|unique:subscribers'
         ]);
 
         if(!$validator->passes()) {
