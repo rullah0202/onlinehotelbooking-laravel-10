@@ -367,8 +367,8 @@
             </script>
         @endif
 
-        <script>
-            (function($){
+        <script type="text/javascript">
+            $(function(){
                 $(".form_subscribe_ajax").on('submit', function(e){
                     e.preventDefault();
                     $('#loader').show();
@@ -405,7 +405,7 @@
                         }
                     });
                 });
-            })(jQuery);
+            });
         </script>
         <div id="loader"></div>
 		
